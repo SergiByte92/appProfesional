@@ -15,7 +15,6 @@ const labels: Record<string, string> = {
   "/listado": "Listado",
   "/informe": "Informe",
   "/ayuda": "Ayuda",
-  "/manual.html": "Manual",
 };
 
 export function Topbar() {
