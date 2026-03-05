@@ -1,26 +1,94 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 12 33% 97%;
+  --foreground: 8 20% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 8 20% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 8 20% 20%;
+  --primary: 1 89% 63%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 8 27% 90%;
+  --secondary-foreground: 8 20% 20%;
+  --muted: 8 24% 94%;
+  --muted-foreground: 11 14% 44%;
+  --accent: 9 18% 30%;
+  --accent-foreground: 12 33% 97%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 10 26% 77%;
+  --input: 10 26% 77%;
+  --ring: 1 89% 63%;
+  --radius: 0.5rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-geist), sans-serif;
+    background-image:
+      radial-gradient(circle at 0% 0%, hsl(1 89% 63% / 0.09), transparent 34%),
+      radial-gradient(circle at 100% 100%, hsl(9 18% 30% / 0.1), transparent 34%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-geist), sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  p,
+  label,
+  td,
+  th {
+    font-family: var(--font-noto), sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .app-shell {
+    @apply min-h-dvh text-foreground;
+  }
+
+  .app-viewport {
+    @apply mx-auto flex min-h-dvh w-full max-w-[1300px];
+  }
+
+  .surface-panel {
+    @apply border border-border/70 bg-card/90 shadow-sm backdrop-blur;
+  }
 }

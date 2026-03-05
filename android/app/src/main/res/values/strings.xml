@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AppSergi</string>
+    <string name="title_activity_main">AppSergi</string>
+    <string name="package_name">com.centro.AppSergi</string>
+    <string name="custom_url_scheme">com.centro.AppSergi</string>
+</resources>
