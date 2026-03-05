@@ -20,8 +20,6 @@ export default function AyudaPage() {
             <a
               className="font-medium text-[#ca605e] hover:text-[#f54c49]"
               href="/manual.html"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Abrir manual HTML
             </a>

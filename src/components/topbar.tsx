@@ -31,6 +31,10 @@ export function Topbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <Button asChild variant="outline" size="sm" className="border-[#755e5e]/40 bg-transparent text-[#f8f6f6] hover:bg-[#4b3f3e]">
+            <Link href="/">Inicio</Link>
+          </Button>
+
           <Button asChild variant="secondary" size="sm" className="border border-transparent bg-[#f8f6f6] text-[#332222] hover:bg-[#edd9d7]">
             <Link href="/informe">Ver informe</Link>
           </Button>

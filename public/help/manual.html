@@ -33,9 +33,32 @@
       padding: 14px;
       margin-top: 10px;
     }
+    .toolbar {
+      position: sticky;
+      top: 8px;
+      z-index: 20;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+    .back-btn {
+      border: 1px solid #ead9d8;
+      background: #fff;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .back-btn:hover { border-color: var(--accent); color: var(--accent); }
   </style>
 </head>
 <body>
+  <div class="toolbar">
+    <button id="backBtn" type="button" class="back-btn" aria-label="Volver a la aplicacion">&lt;- Volver</button>
+  </div>
   <h1>Manual de usuario</h1>
   <p class="muted">Version web y Android (Capacitor)</p>
 
@@ -82,5 +105,15 @@
     <p>Ruta dinamica exportada:</p>
     <p><code>src/app/detalle/[id]/page.tsx -> generateStaticParams()</code></p>
   </div>
+  <script>
+    const backBtn = document.getElementById("backBtn");
+    backBtn?.addEventListener("click", function () {
+      if (window.history.length > 1) {
+        window.history.back();
+        return;
+      }
+      window.location.href = "/ayuda";
+    });
+  </script>
 </body>
 </html>

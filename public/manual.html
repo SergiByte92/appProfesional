@@ -26,6 +26,25 @@
       margin: 0 auto;
       padding: 36px 18px 48px;
     }
+    .toolbar {
+      position: sticky;
+      top: 8px;
+      z-index: 20;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 14px;
+    }
+    .back-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .back-btn:hover { border-color: var(--accent); color: var(--accent); }
     h1 {
       margin: 0 0 8px;
       color: var(--accent);
@@ -78,6 +97,9 @@
 </head>
 <body>
   <main class="container">
+    <div class="toolbar">
+      <button id="backBtn" type="button" class="back-btn" aria-label="Volver a la aplicacion">&lt;- Volver</button>
+    </div>
     <h1>Manual de ayuda</h1>
     <p class="lead">App Profesional - guia de uso para version web y Android (Capacitor).</p>
 
@@ -130,5 +152,15 @@
 
     <p class="footer">Documento generado para entrega academica. Actualizar cuando cambie el flujo funcional.</p>
   </main>
+  <script>
+    const backBtn = document.getElementById("backBtn");
+    backBtn?.addEventListener("click", function () {
+      if (window.history.length > 1) {
+        window.history.back();
+        return;
+      }
+      window.location.href = "/ayuda";
+    });
+  </script>
 </body>
 </html>
