@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   return (
@@ -44,35 +45,104 @@ export default function HomePage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Identidad visual</CardTitle>
+          <CardTitle>Contexto visual ejecutivo</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid gap-3 md:grid-cols-3">
-            <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
+        <CardContent className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="overflow-hidden rounded-xl border border-border/70">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1400&q=80"
+              alt="Perfil ejecutivo principal"
+              className="h-72 w-full object-cover grayscale-[20%] transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="grid gap-4">
+            <div className="overflow-hidden rounded-xl border border-border/70">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
-                alt="Perfil profesional ejecutivo 1"
-                className="h-56 w-full object-cover grayscale opacity-85 transition-transform duration-500 hover:scale-105"
+                src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&w=1400&q=80"
+                alt="Perfil ejecutivo secundario"
+                className="h-[140px] w-full object-cover grayscale-[20%] transition-transform duration-500 hover:scale-105"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
-              <img
-                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80"
-                alt="Perfil profesional ejecutivo 2"
-                className="h-56 w-full object-cover grayscale opacity-85 transition-transform duration-500 hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
-              <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80"
-                alt="Perfil profesional ejecutivo 3"
-                className="h-56 w-full object-cover grayscale opacity-85 transition-transform duration-500 hover:scale-105"
-                loading="lazy"
-              />
+            <div className="rounded-xl border border-border/70 bg-white p-4">
+              <p className="text-xs uppercase tracking-[0.14em] text-[#a06665]">Publico objetivo</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Perfil profesional que busca claridad, control y lectura rapida del estado operativo.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Badge>Claridad</Badge>
+                <Badge variant="secondary">Consistencia</Badge>
+                <Badge variant="outline">Decision rapida</Badge>
+              </div>
             </div>
           </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Componentes UI aplicados</CardTitle>
+        </CardHeader>
+        <CardContent className="grid gap-4 lg:grid-cols-2">
+          <section className="rounded-xl border border-border/70 bg-white p-5">
+            <p className="text-2xl font-semibold">Payment Method</p>
+            <p className="text-sm text-muted-foreground">Update your billing details.</p>
+            <div className="mt-4 flex items-center gap-3 rounded-lg border border-border/70 p-3">
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#332222] text-xs font-semibold text-white">V</div>
+              <div>
+                <p className="text-sm font-semibold">Visa ending in 4242</p>
+                <p className="text-xs text-muted-foreground">Expires 12/28</p>
+              </div>
+            </div>
+            <Button className="mt-4 w-full">Save Changes</Button>
+          </section>
+
+          <section className="rounded-xl border border-border/70 bg-white p-5">
+            <p className="text-xs uppercase tracking-[0.14em] text-[#a06665]">Interactive</p>
+            <div className="mt-4 flex items-start justify-between gap-4">
+              <div>
+                <p className="font-semibold">Email Notifications</p>
+                <p className="text-sm text-muted-foreground">Receive daily digests</p>
+              </div>
+              <div className="h-6 w-11 rounded-full bg-[#f54c49] p-1">
+                <div className="ml-auto h-4 w-4 rounded-full bg-white" />
+              </div>
+            </div>
+            <div className="mt-5 border-t border-border/70 pt-4">
+              <div className="mb-2 flex items-center justify-between">
+                <p className="font-semibold">Risk Tolerance</p>
+                <p className="text-sm font-semibold text-[#f54c49]">60%</p>
+              </div>
+              <div className="h-2 rounded-full bg-muted">
+                <div className="h-2 w-3/5 rounded-full bg-[#f54c49]" />
+              </div>
+            </div>
+          </section>
+
+          <section className="rounded-xl border border-border/70 bg-white p-5">
+            <p className="text-xs uppercase tracking-[0.14em] text-[#a06665]">Badges</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Badge>Active</Badge>
+              <Badge variant="secondary">Pending</Badge>
+              <Badge variant="outline">Archived</Badge>
+            </div>
+          </section>
+
+          <section className="rounded-xl border border-border/70 bg-white p-5">
+            <p className="text-xs uppercase tracking-[0.14em] text-[#a06665]">Progress</p>
+            <div className="mt-4 h-2 rounded-full bg-muted">
+              <div className="h-2 w-3/4 rounded-full bg-[#ca605e]" />
+            </div>
+            <p className="mt-5 text-xs uppercase tracking-[0.14em] text-[#a06665]">Avatar</p>
+            <div className="mt-3 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#332222] text-sm font-semibold text-white">JD</div>
+              <div>
+                <p className="font-semibold">Jane Doe</p>
+                <p className="text-sm text-muted-foreground">Executive Director</p>
+              </div>
+            </div>
+          </section>
         </CardContent>
       </Card>
     </div>
