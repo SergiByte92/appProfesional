@@ -16,12 +16,12 @@ export default function AyudaPage() {
             <CardTitle>Manual en HTML</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
-            <p>Manual disponible en <code className="text-xs">public/help/manual.html</code>.</p>
+            <p>Manual disponible en <code className="text-xs">public/manual.html</code>.</p>
             <a
               className="font-medium text-[#ca605e] hover:text-[#f54c49]"
               href="/manual.html"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Abrir manual HTML
             </a>
