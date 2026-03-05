@@ -7,23 +7,27 @@ const HELP: Record<string, { title: string; body: string }> = {
   home: {
     title: "Ayuda: Inicio",
     body:
-      "Gracias por usar la aplicacion.\n\nFlujo recomendado:\n1) Entra en Listado para ver todos los registros.\n2) Abre un detalle para revisar informacion completa.\n3) Ve a Informe para aplicar filtros y analizar KPIs.\n4) Consulta Ayuda para documentacion y pasos de Android.",
+      "Pantalla de bienvenida.\n\nAqui puedes:\n- Acceder rapidamente al listado.\n- Ir al informe de indicadores.\n- Consultar el centro de ayuda.",
   },
   listado: {
     title: "Ayuda: Listado",
-    body: "El listado muestra todos los registros. Usa 'Ver detalle' para abrir la ficha completa de cada elemento.",
+    body:
+      "Muestra todos los registros del sistema.\n\nAqui puedes:\n- Revisar estado, categoria y responsable.\n- Abrir 'Ver detalle' para cada registro.",
   },
   detalle: {
     title: "Ayuda: Detalle",
-    body: "Muestra la informacion completa del registro: categoria, responsable, fecha, importe y observaciones.",
+    body:
+      "Ficha completa de un registro concreto.\n\nAqui puedes:\n- Ver datos clave (categoria, responsable, fecha e importe).\n- Consultar observaciones asociadas.",
   },
   informe: {
     title: "Ayuda: Informe",
-    body: "Aplica filtros por estado, categoria, responsable y fechas. Revisa KPIs, grafico por categoria y tabla de resultados.",
+    body:
+      "Panel de analisis de datos.\n\nAqui puedes:\n- Filtrar por estado, categoria, responsable y rango de fechas.\n- Revisar KPIs y grafico por categoria.\n- Consultar la tabla resumen filtrada.",
   },
   ayuda: {
     title: "Ayuda: Centro de ayuda",
-    body: "Aqui puedes abrir el manual HTML y revisar la documentacion de uso e instalacion Android.",
+    body:
+      "Centro de documentacion.\n\nAqui puedes:\n- Abrir el manual de usuario.\n- Consultar instalacion Android y configuracion basica.",
   },
 };
 
