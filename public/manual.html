@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manual de usuario - App Profesional</title>
+  <style>
+    :root {
+      --bg: #f8f6f6;
+      --text: #332222;
+      --muted: #755e5e;
+      --accent: #f54c49;
+      --border: #a06665;
+    }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      max-width: 920px;
+      margin: 32px auto;
+      padding: 0 18px 32px;
+      line-height: 1.55;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1, h2, h3 { margin-top: 28px; }
+    h1 { color: var(--accent); margin-top: 8px; }
+    h2 { border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    code { background:#fff; padding:2px 6px; border-radius:6px; border:1px solid #ead9d8; }
+    .muted { color: var(--muted); }
+    .box {
+      background: #fff;
+      border: 1px solid #ead9d8;
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Manual de usuario</h1>
+  <p class="muted">Version web y Android (Capacitor)</p>
+
+  <h2>1. Descripcion de pantallas</h2>
+  <div class="box">
+    <h3>Inicio</h3>
+    <p>Punto de entrada con resumen del flujo de trabajo y acceso rapido a listado, informe y ayuda.</p>
+    <h3>Listado</h3>
+    <p>Muestra todos los registros y su estado. Desde aqui se abre cada detalle.</p>
+    <h3>Detalle</h3>
+    <p>Visualiza la informacion completa de un registro: categoria, responsable, fecha, importe y notas.</p>
+    <h3>Informe</h3>
+    <p>Incluye filtros, KPIs, grafico por categoria y tabla resumen de resultados filtrados.</p>
+    <h3>Centro de ayuda</h3>
+    <p>Contiene este manual y la ayuda contextual por pantalla.</p>
+  </div>
+
+  <h2>2. Flujo de uso</h2>
+  <div class="box">
+    <ol>
+      <li>Entrar en <strong>Listado</strong> para revisar registros.</li>
+      <li>Abrir <strong>Detalle</strong> para inspeccionar un caso concreto.</li>
+      <li>Usar <strong>Informe</strong> para analizar datos con filtros y metricas.</li>
+      <li>Consultar <strong>Ayuda</strong> para documentacion y dudas de operacion.</li>
+    </ol>
+  </div>
+
+  <h2>3. Instalacion Android</h2>
+  <div class="box">
+    <p>Comandos basicos:</p>
+    <p><code>npm run build</code></p>
+    <p><code>npx cap sync android</code></p>
+    <p><code>npx cap open android</code></p>
+    <p>Para instalar APK en emulador:</p>
+    <p><code>adb install -r android/app/release/app-release.apk</code></p>
+  </div>
+
+  <h2>4. Configuracion basica</h2>
+  <div class="box">
+    <p>Archivo de salida para Android:</p>
+    <p><code>capacitor.config.ts -> webDir: "out"</code></p>
+    <p>Compilacion web estatica:</p>
+    <p><code>next.config.ts -> output: "export"</code></p>
+    <p>Ruta dinamica exportada:</p>
+    <p><code>src/app/detalle/[id]/page.tsx -> generateStaticParams()</code></p>
+  </div>
+</body>
+</html>
