@@ -6,28 +6,62 @@ export default function HomePage() {
     <div className="space-y-6">
       <PageHeader
         title="Inicio"
-        description="Panel principal con navegacion lateral, topbar y accesos a listado, informe y ayuda."
+        description="Gracias por usar App Profesional. Desde aqui puedes revisar la actividad y acceder rapidamente a cada modulo."
         helpKey="home"
       />
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle>Que hace la aplicacion</CardTitle>
+            <CardTitle>Bienvenida</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            Gestiona incidencias de hardware, software y red. Permite revisar registros, ver detalle e interpretar metricas.
+            Esta aplicacion centraliza incidencias de hardware, software y red para que el seguimiento diario sea claro y ordenado.
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Flujo recomendado</CardTitle>
+            <CardTitle>Objetivo</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            1) Consulta <span className="font-medium">/listado</span>, 2) abre un detalle, 3) revisa <span className="font-medium">/informe</span> para filtros y KPIs.
+            Facilitar la toma de decisiones con informacion filtrada, metricas visibles y documentacion de apoyo en cada pantalla.
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Identidad visual</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-3 md:grid-cols-3">
+            <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80"
+                alt="Perfil profesional 1"
+                className="h-56 w-full object-cover grayscale opacity-85"
+                loading="lazy"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+                alt="Perfil profesional 2"
+                className="h-56 w-full object-cover grayscale opacity-85"
+                loading="lazy"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80"
+                alt="Perfil profesional 3"
+                className="h-56 w-full object-cover grayscale opacity-85"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

@@ -6,7 +6,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 const HELP: Record<string, { title: string; body: string }> = {
   home: {
     title: "Ayuda: Inicio",
-    body: "Desde esta pantalla accedes a listado, informe y centro de ayuda. La topbar concentra las acciones globales.",
+    body:
+      "Gracias por usar la aplicacion.\n\nFlujo recomendado:\n1) Entra en Listado para ver todos los registros.\n2) Abre un detalle para revisar informacion completa.\n3) Ve a Informe para aplicar filtros y analizar KPIs.\n4) Consulta Ayuda para documentacion y pasos de Android.",
   },
   listado: {
     title: "Ayuda: Listado",
