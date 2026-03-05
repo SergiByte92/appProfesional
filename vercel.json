@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/manual.html",
+      "destination": "/manual.html"
+    }
+  ]
+}
