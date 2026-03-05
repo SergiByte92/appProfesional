@@ -50,24 +50,24 @@ export default function HomePage() {
           <div className="grid gap-3 md:grid-cols-3">
             <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
-                alt="Equipo en entorno profesional"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
+                alt="Perfil profesional ejecutivo 1"
                 className="h-56 w-full object-cover grayscale opacity-85 transition-transform duration-500 hover:scale-105"
                 loading="lazy"
               />
             </div>
             <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
-                alt="Trabajo colaborativo en oficina"
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80"
+                alt="Perfil profesional ejecutivo 2"
                 className="h-56 w-full object-cover grayscale opacity-85 transition-transform duration-500 hover:scale-105"
                 loading="lazy"
               />
             </div>
             <div className="overflow-hidden rounded-lg border border-border/70 bg-[#332222]">
               <img
-                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
-                alt="Sesion ejecutiva de seguimiento"
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80"
+                alt="Perfil profesional ejecutivo 3"
                 className="h-56 w-full object-cover grayscale opacity-85 transition-transform duration-500 hover:scale-105"
                 loading="lazy"
               />
