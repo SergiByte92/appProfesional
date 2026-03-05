@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manual de ayuda - App Profesional</title>
+  <style>
+    :root {
+      --bg: #f8f6f6;
+      --panel: #ffffff;
+      --text: #332222;
+      --muted: #755e5e;
+      --accent: #f54c49;
+      --border: #ead9d8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 18px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.15rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 1rem;
+    }
+    p { margin: 8px 0; }
+    .lead { color: var(--muted); margin-top: 0; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 14px rgba(51, 34, 34, 0.06);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    code {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px 6px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.92em;
+    }
+    ol { margin: 10px 0 0 20px; }
+    li { margin: 6px 0; }
+    .footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Manual de ayuda</h1>
+    <p class="lead">App Profesional - guia de uso para version web y Android (Capacitor).</p>
+
+    <h2>1. Descripcion de pantallas</h2>
+    <div class="grid">
+      <section class="card">
+        <h3>Inicio</h3>
+        <p>Vista de bienvenida con accesos rapidos a las secciones principales y resumen visual del sistema.</p>
+      </section>
+      <section class="card">
+        <h3>Listado</h3>
+        <p>Muestra todos los registros con su estado, categoria y responsable. Desde aqui se abre cada detalle.</p>
+      </section>
+      <section class="card">
+        <h3>Detalle</h3>
+        <p>Presenta la informacion completa de un registro: datos clave, fecha, importe y observaciones.</p>
+      </section>
+      <section class="card">
+        <h3>Informe</h3>
+        <p>Panel de analisis con filtros, KPIs, grafico por categoria y tabla resumen de resultados.</p>
+      </section>
+    </div>
+
+    <h2>2. Flujo de uso</h2>
+    <div class="card">
+      <ol>
+        <li>Entrar en <strong>Listado</strong> para revisar incidencias.</li>
+        <li>Abrir <strong>Detalle</strong> para validar un registro concreto.</li>
+        <li>Ir a <strong>Informe</strong> para filtrar y analizar metricas.</li>
+        <li>Consultar <strong>Ayuda</strong> para resolver dudas funcionales.</li>
+      </ol>
+    </div>
+
+    <h2>3. Instalacion Android (APK)</h2>
+    <div class="card">
+      <p>Comandos recomendados:</p>
+      <p><code>npm run build</code></p>
+      <p><code>npx cap sync android</code></p>
+      <p><code>npx cap open android</code></p>
+      <p>Instalacion en emulador/dispositivo:</p>
+      <p><code>adb install -r android/app/release/app-release.apk</code></p>
+    </div>
+
+    <h2>4. Configuracion basica</h2>
+    <div class="card">
+      <p><code>next.config.ts</code>: <strong>output = "export"</strong></p>
+      <p><code>capacitor.config.ts</code>: <strong>webDir = "out"</strong></p>
+      <p><code>src/app/detalle/[id]/page.tsx</code>: uso de <strong>generateStaticParams()</strong> para export estatico.</p>
+    </div>
+
+    <p class="footer">Documento generado para entrega academica. Actualizar cuando cambie el flujo funcional.</p>
+  </main>
+</body>
+</html>
