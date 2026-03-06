@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# App Profesional
 
-## Getting Started
+Aplicacion profesional desarrollada con **Next.js + React + shadcn/ui** y empaquetada para Android mediante **Capacitor**.
 
-First, run the development server:
+## Objetivo de la actividad
+
+- Mejorar y organizar la interfaz siguiendo manual de estilo.
+- Implementar sistema de informes con filtros, KPIs y grafico.
+- Incluir ayuda contextual y manual/documentacion estructurada.
+- Generar APK Android para instalacion.
+
+## Stack tecnico
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS + shadcn/ui
+- Recharts
+- Capacitor Android
+
+## Estructura funcional
+
+- `Inicio`: panel principal y accesos rapidos.
+- `Listado`: registros operativos con acceso a detalle.
+- `Detalle`: vista individual por registro.
+- `Informe`: filtros + KPIs + grafico + tabla resumen.
+- `Ayuda`: boton contextual `?`, centro de ayuda y manual HTML.
+
+## Diseno y responsive
+
+- Sidebar en escritorio y navegacion compacta en movil.
+- Topbar optimizada para movil (sin solaparse con barra de estado).
+- Correcciones de overflow horizontal para evitar recortes en pantallas pequenas.
+- Tipografias usadas: **Geist** + **Noto Sans JP**.
+
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build de produccion web
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+La app se exporta en `out/` (configurado con `output: "export"` en `next.config.ts`).
 
-## Learn More
+## Flujo Android (Capacitor)
 
-To learn more about Next.js, take a look at the following resources:
+Sincronizar assets web con Android:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx cap sync android
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Abrir proyecto Android Studio:
 
-## Deploy on Vercel
+```bash
+npx cap open android
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## APK Debug
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd android
+./gradlew assembleDebug
+```
+
+Salida:
+
+- `android/app/build/outputs/apk/debug/app-debug.apk`
+
+## APK Release (firmada)
+
+Generacion release:
+
+```bash
+cd android
+./gradlew assembleRelease
+```
+
+APK generado por Gradle:
+
+- `android/app/build/outputs/apk/release/app-release-unsigned.apk`
+
+Firma APK (ejemplo con `apksigner`):
+
+```bash
+apksigner sign --ks <tu-keystore.jks> --out app-release-signed.apk app-release-unsigned.apk
+```
+
+Verificacion:
+
+```bash
+apksigner verify --print-certs app-release-signed.apk
+```
+
+## Instalacion en dispositivo/emulador
+
+```bash
+adb install -r android/app/build/outputs/apk/release/app-release-signed.apk
+```
+
+## Checklist final de entrega
+
+- [x] Build de produccion generado
+- [x] Capacitor sincronizado correctamente
+- [x] APK Release firmada creada
+- [x] APK instalada y funcionando
+- [x] Diseno responsive en movil
+- [x] Documento README incluido
