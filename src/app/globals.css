@@ -58,6 +58,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-geist), sans-serif;
+    overflow-x: hidden;
     background-image:
       radial-gradient(circle at 0% 0%, hsl(1 89% 63% / 0.09), transparent 34%),
       radial-gradient(circle at 100% 100%, hsl(9 18% 30% / 0.1), transparent 34%);
@@ -82,10 +83,12 @@
 @layer components {
   .app-shell {
     @apply min-h-dvh text-foreground;
+    overflow-x: clip;
   }
 
   .app-viewport {
     @apply mx-auto flex min-h-dvh w-full max-w-[1300px];
+    overflow-x: clip;
   }
 
   .surface-panel {
