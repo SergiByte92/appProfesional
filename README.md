@@ -2,6 +2,10 @@
 
 Aplicacion profesional desarrollada con **Next.js + React + shadcn/ui** y empaquetada para Android mediante **Capacitor**.
 
+## Captura de la aplicacion
+
+![Pantalla principal App Profesional](docs/readme.png)
+
 ## Objetivo de la actividad
 
 - Mejorar y organizar la interfaz siguiendo manual de estilo.
